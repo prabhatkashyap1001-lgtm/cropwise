@@ -151,8 +151,17 @@ export function localizeInsight(item, code = 'en') {
   };
 }
 
-export function localizeAdvisorySummary(code = 'en') {
-  return (COPY[code] || COPY.en).summary;
+export function localizeAdvisorySummary(code = 'en', advisory = null) {
+  const c = COPY[code] || COPY.en;
+  const insights = advisory?.insights || [];
+  const flagged = insights
+    .filter((item) => item.level === 'high' || item.level === 'moderate')
+    .slice(0, 2)
+    .map((item) => localizeInsight(item, code).message);
+  if (flagged.length) return flagged.join(' ');
+  const rain = insights.find((item) => item.id === 'rain_outlook');
+  if (rain) return localizeInsight(rain, code).message;
+  return c.summary;
 }
 
 export function localizeEtc(etc, cropLabel, stageLabel, code = 'en') {
