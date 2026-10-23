@@ -28,7 +28,7 @@ function Banner({ tone, Icon, children, action }) {
 }
 
 export default function Weather() {
-  const { t } = useI18n()
+  const { t, code } = useI18n()
   const { user } = useAuth()
   const [location, setLocation] = useState(() => loadLocation())
   const [{ crop, stage }, setCropChoice] = useState(() => loadCropChoice())
@@ -68,7 +68,7 @@ export default function Weather() {
                 // Explicit choice only: resolve the profile place by name, pick the first match.
                 try {
                   const { api } = await import('../api/client')
-                  const res = await api.searchLocations(profilePlace)
+                  const res = await api.searchLocations(profilePlace, { language: ['bho', 'mai'].includes(code) ? 'hi' : code })
                   const r = res.results && res.results[0]
                   if (r) onSelect({ label: r.label, name: r.name, admin1: r.admin1, admin2: r.admin2, country: r.country, latitude: r.latitude, longitude: r.longitude, source: 'search' })
                 } catch (e) { /* the search box above remains available */ }
