@@ -1563,5 +1563,9 @@
   "weatherPage.loc.timeout": "స్థాన అభ్యర్థన సమయం ముగిసింది. మళ్లీ ప్రయత్నించండి లేదా ప్రాంతాన్ని వెతకండి.",
   "weatherPage.loc.unavailable": "పరికరం నుండి స్థానం పొందలేకపోయాం. మళ్లీ ప్రయత్నించండి లేదా ప్రాంతాన్ని వెతకండి.",
   "weatherPage.loc.unsupported": "ఈ బ్రౌజర్ స్థాన సదుపాయాన్ని మద్దతు ఇవ్వదు. బదులుగా ప్రాంతాన్ని వెతకండి.",
-  "weatherPage.loc.insecure": "స్థాన సదుపాయానికి సురక్షిత HTTPS పేజీ అవసరం."
+  "weatherPage.loc.insecure": "స్థాన సదుపాయానికి సురక్షిత HTTPS పేజీ అవసరం.",
+  "weatherPage.stage.initial": "ప్రారంభ / విత్తడం",
+  "weatherPage.stage.development": "అభివృద్ధి / వృక్ష దశ",
+  "weatherPage.stage.mid": "మధ్య సీజన్ (పుష్పించడం, గింజ లేదా పండు ఏర్పడటం)",
+  "weatherPage.stage.late": "చివరి సీజన్ / పరిపక్వత"
 }
