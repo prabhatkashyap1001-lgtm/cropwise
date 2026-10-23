@@ -91,7 +91,7 @@ export default function AdvisoryPanel({ advisory, crop, stage, onCropChange, onS
       </div>
 
       {!advisory.available ? (
-        <p className="text-sm text-ink/60 dark:text-paper/60">{advisory.reason || t('weatherPage.advisory.unavailable')}</p>
+        <p className="text-sm text-ink/60 dark:text-paper/60">{t('weatherPage.advisory.unavailable')}</p>
       ) : (
         <>
           <div className="rounded-xl bg-sage/30 dark:bg-white/5 px-4 py-3 mb-5" role="note">
