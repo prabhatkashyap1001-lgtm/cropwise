@@ -29,7 +29,7 @@ function InsightCard({ item, icon: Icon }) {
     <article className="border border-black/5 dark:border-white/10 rounded-xl p-3.5 bg-white dark:bg-white/5">
       <div className="flex items-start justify-between gap-2 mb-1.5">
         <h4 className="font-display font-semibold text-sm flex items-center gap-1.5">
-          {Icon && <Icon size={15} className="text-forest dark:text-forest-light" aria-hidden="true" />}{item.title}
+          {Icon && <Icon size={15} className="text-forest dark:text-forest-light" aria-hidden="true" />}{localized.title}
         </h4>
         <LevelBadge level={item.level} />
       </div>
