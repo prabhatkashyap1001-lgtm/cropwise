@@ -1563,5 +1563,9 @@
   "weatherPage.loc.timeout": "लोकेशन के अनुरोध के समय पूरा हो गइल। फेर कोशिश करीं भा जगह खोजीं।",
   "weatherPage.loc.unavailable": "डिवाइस से लोकेशन ना मिलल। फेर कोशिश करीं भा जगह खोजीं।",
   "weatherPage.loc.unsupported": "ई ब्राउजर लोकेशन सुविधा के समर्थन ना करेला। जगह खोजीं।",
-  "weatherPage.loc.insecure": "लोकेशन सुविधा खातिर सुरक्षित HTTPS पेज जरूरी बा।"
+  "weatherPage.loc.insecure": "लोकेशन सुविधा खातिर सुरक्षित HTTPS पेज जरूरी बा।",
+  "weatherPage.stage.initial": "सुरुआती / बुआई",
+  "weatherPage.stage.development": "बढ़वार / हरियर बढ़े के अवस्था",
+  "weatherPage.stage.mid": "बीच के मौसम (फूल, दाना भा फल बने के समय)",
+  "weatherPage.stage.late": "आखिरी मौसम / पके के अवस्था"
 }
