@@ -12,7 +12,7 @@ const FUTURE_SHOWN = 24
 /** Hourly FORECAST for the next 24 h (with the last few hours dimmed as
  *  "earlier" and the current hour highlighted). */
 export default function HourlyForecast({ hourly }) {
-  const { t } = useI18n()
+  const { t, code } = useI18n()
   const { theme } = useTheme()
   const dark = theme === 'dark'
 
@@ -49,13 +49,13 @@ export default function HourlyForecast({ hourly }) {
         <ResponsiveContainer width="100%" height="100%">
           <ComposedChart data={chart} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" stroke={grid} />
-            <XAxis dataKey="time" tickFormatter={formatHour} tick={{ fontSize: 10, fill: axis }} interval="preserveStartEnd" minTickGap={24} />
+            <XAxis dataKey="time" tickFormatter={(value) => formatHour(value, code)} tick={{ fontSize: 10, fill: axis }} interval="preserveStartEnd" minTickGap={24} />
             <YAxis yAxisId="t" tick={{ fontSize: 10, fill: axis }} width={32} unit="°" />
             <YAxis yAxisId="r" orientation="right" domain={[0, 100]} tick={{ fontSize: 10, fill: axis }} width={36} unit="%" />
             <Tooltip
               contentStyle={dark ? { background: '#1F4D3D', border: '1px solid rgba(255,255,255,0.15)', color: '#F7F3EA' } : undefined}
               labelStyle={dark ? { color: '#F7F3EA' } : undefined}
-              labelFormatter={(v) => `${formatDayShort(v)} ${formatHour(v)}`}
+              labelFormatter={(v) => `${formatDayShort(v, code)} ${formatHour(v, code)}`}
               formatter={(v, name) => [name === 'rain' ? `${v}%` : `${v}°C`, name === 'rain' ? t('weatherPage.hourly.rainChance') : t('weatherPage.hourly.temp')]}
             />
             <Bar yAxisId="r" dataKey="rain" fill={dark ? '#6FA8B8' : '#3E6F7F'} fillOpacity={0.45} radius={[2, 2, 0, 0]} />
@@ -81,7 +81,7 @@ export default function HourlyForecast({ hourly }) {
                     : 'border-black/5 dark:border-white/10'}`}
             >
               <div className="text-[10px] font-semibold text-ink/60 dark:text-paper/60">
-                {isNow ? t('weatherPage.hourly.now') : isPast ? t('weatherPage.hourly.earlier') : newDay ? formatDayShort(h.time) : formatHour(h.time)}
+                {isNow ? t('weatherPage.hourly.now') : isPast ? t('weatherPage.hourly.earlier') : newDay ? formatDayShort(h.time, code) : formatHour(h.time, code)}
               </div>
               <Icon size={20} className="my-1 text-forest dark:text-forest-light" aria-label={h.condition || undefined} />
               <div className="font-mono-data text-sm font-semibold">{roundOrDash(h.temperature)}°</div>
