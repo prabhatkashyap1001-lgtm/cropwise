@@ -1682,5 +1682,9 @@
   "weatherPage.loc.timeout": "مقام کی درخواست کا وقت ختم ہوگیا۔ دوبارہ کوشش کریں یا مقام تلاش کریں۔",
   "weatherPage.loc.unavailable": "آلے سے مقام حاصل نہیں ہو سکا۔ دوبارہ کوشش کریں یا مقام تلاش کریں۔",
   "weatherPage.loc.unsupported": "یہ براؤزر مقام کی سہولت کی حمایت نہیں کرتا۔ اس کے بجائے مقام تلاش کریں۔",
-  "weatherPage.loc.insecure": "مقام کی سہولت کے لیے محفوظ HTTPS صفحہ ضروری ہے۔"
+  "weatherPage.loc.insecure": "مقام کی سہولت کے لیے محفوظ HTTPS صفحہ ضروری ہے۔",
+  "weatherPage.stage.initial": "ابتدائی / بوائی",
+  "weatherPage.stage.development": "نشوونما / نباتاتی مرحلہ",
+  "weatherPage.stage.mid": "درمیانی موسم (پھول، دانہ یا پھل بننا)",
+  "weatherPage.stage.late": "آخری موسم / پکنا"
 }
