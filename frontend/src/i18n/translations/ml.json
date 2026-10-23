@@ -1563,5 +1563,9 @@
   "weatherPage.loc.timeout": "സ്ഥല അഭ്യർത്ഥനയുടെ സമയം കഴിഞ്ഞു. വീണ്ടും ശ്രമിക്കുകയോ സ്ഥലം തിരയുകയോ ചെയ്യുക.",
   "weatherPage.loc.unavailable": "ഉപകരണത്തിൽ നിന്ന് സ്ഥലം ലഭിച്ചില്ല. വീണ്ടും ശ്രമിക്കുകയോ സ്ഥലം തിരയുകയോ ചെയ്യുക.",
   "weatherPage.loc.unsupported": "ഈ ബ്രൗസർ സ്ഥല സൗകര്യത്തെ പിന്തുണയ്ക്കുന്നില്ല. പകരം സ്ഥലം തിരയുക.",
-  "weatherPage.loc.insecure": "സ്ഥല സൗകര്യത്തിന് സുരക്ഷിതമായ HTTPS പേജ് ആവശ്യമാണ്."
+  "weatherPage.loc.insecure": "സ്ഥല സൗകര്യത്തിന് സുരക്ഷിതമായ HTTPS പേജ് ആവശ്യമാണ്.",
+  "weatherPage.stage.initial": "ആരംഭം / വിതയ്ക്കൽ",
+  "weatherPage.stage.development": "വളർച്ച / സസ്യവളർച്ച ഘട്ടം",
+  "weatherPage.stage.mid": "മധ്യകാലം (പൂക്കൽ, ധാന്യം അല്ലെങ്കിൽ കായ രൂപീകരണം)",
+  "weatherPage.stage.late": "അവസാനഘട്ടം / പാകം"
 }
