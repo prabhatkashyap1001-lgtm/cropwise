@@ -1662,5 +1662,9 @@
   "weatherPage.loc.timeout": "स्थान विनंतीची वेळ संपली. पुन्हा प्रयत्न करा किंवा ठिकाण शोधा.",
   "weatherPage.loc.unavailable": "तुमच्या डिव्हाइसकडून स्थान मिळू शकले नाही. पुन्हा प्रयत्न करा किंवा ठिकाण शोधा.",
   "weatherPage.loc.unsupported": "हा ब्राउझर स्थान सुविधेला समर्थन देत नाही. त्याऐवजी ठिकाण शोधा.",
-  "weatherPage.loc.insecure": "स्थान सुविधेसाठी सुरक्षित HTTPS पृष्ठ आवश्यक आहे."
+  "weatherPage.loc.insecure": "स्थान सुविधेसाठी सुरक्षित HTTPS पृष्ठ आवश्यक आहे.",
+  "weatherPage.stage.initial": "प्रारंभिक / पेरणी",
+  "weatherPage.stage.development": "वाढ / शाकीय अवस्था",
+  "weatherPage.stage.mid": "मध्य हंगाम (फुलोरा, दाणे किंवा फळधारणा)",
+  "weatherPage.stage.late": "उशिराचा हंगाम / परिपक्वता"
 }
