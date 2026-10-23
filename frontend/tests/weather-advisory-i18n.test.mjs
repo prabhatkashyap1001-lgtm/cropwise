@@ -87,6 +87,8 @@ test('every advisory type has localized title, message, and trigger in every lan
       assert.ok(localized.title, `${code} missing title for ${sample.id}`)
       assert.ok(localized.message, `${code} missing message for ${sample.id}`)
       assert.ok(localized.trigger, `${code} missing trigger for ${sample.id}`)
+      assert.ok(localized.basis, `${code} missing basis for ${sample.id}`)
+      assert.notEqual(localized.basis, 'English server basis', `${code} has English basis for ${sample.id}`)
       assert.notEqual(localized.title, 'English title', `${code} has English title for ${sample.id}`)
       assert.notEqual(localized.message, 'English message', `${code} has English message for ${sample.id}`)
     }
