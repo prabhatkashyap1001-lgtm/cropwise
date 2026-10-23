@@ -1661,5 +1661,9 @@
   "weatherPage.loc.timeout": "অবস্থান অনুরোধের সময় শেষ হয়েছে। আবার চেষ্টা করুন অথবা স্থান খুঁজুন।",
   "weatherPage.loc.unavailable": "ডিভাইস থেকে অবস্থান পাওয়া যায়নি। আবার চেষ্টা করুন অথবা স্থান খুঁজুন।",
   "weatherPage.loc.unsupported": "এই ব্রাউজারে অবস্থান সুবিধা সমর্থিত নয়। পরিবর্তে স্থান খুঁজুন।",
-  "weatherPage.loc.insecure": "অবস্থান সুবিধার জন্য নিরাপদ HTTPS পৃষ্ঠা প্রয়োজন।"
+  "weatherPage.loc.insecure": "অবস্থান সুবিধার জন্য নিরাপদ HTTPS পৃষ্ঠা প্রয়োজন।",
+  "weatherPage.stage.initial": "প্রাথমিক / বপন",
+  "weatherPage.stage.development": "বৃদ্ধি / উদ্ভিদীয় পর্যায়",
+  "weatherPage.stage.mid": "মধ্য-মৌসুম (ফুল, দানা বা ফল গঠন)",
+  "weatherPage.stage.late": "শেষ মৌসুম / পরিপক্বতা"
 }
