@@ -50,6 +50,9 @@ export function AdvisorySkeleton() {
   )
 }
 
+const CROP_I18N_KEY = { wheat: 'auth.crop.wheat', paddy: 'auth.crop.paddyRice', maize: 'auth.crop.maize', tomato: 'auth.crop.tomato', potato: 'auth.crop.potato', onion: 'auth.crop.onion', soybean: 'auth.crop.soybean', groundnut: 'auth.crop.groundnut', mustard: 'auth.crop.mustard', chickpea: 'auth.crop.chanaGram', sugarcane: 'auth.crop.sugarcane' }
+const STAGE_I18N_KEY = { initial: 'weatherPage.stage.initial', development: 'weatherPage.stage.development', mid: 'weatherPage.stage.mid', late: 'weatherPage.stage.late' }
+
 const selectCls = 'w-full border border-black/10 dark:border-white/15 rounded-lg px-3 py-2.5 text-sm bg-white dark:bg-white/5 dark:text-paper min-h-[44px] focus:outline-none focus:ring-2 focus:ring-forest/40'
 
 /**
@@ -78,14 +81,14 @@ export default function AdvisoryPanel({ advisory, crop, stage, onCropChange, onS
           <label htmlFor="wx-crop" className="block text-xs font-medium text-ink/60 dark:text-paper/60 mb-1">{t('weatherPage.advisory.cropLabel')}</label>
           <select id="wx-crop" value={crop} onChange={(e) => onCropChange(e.target.value)} className={selectCls}>
             <option value="">{t('weatherPage.advisory.noCrop')}</option>
-            {(advisory.supported_crops || []).map((c) => <option key={c.key} value={c.label}>{c.label}</option>)}
+            {(advisory.supported_crops || []).map((c) => <option key={c.key} value={c.label}>{t(CROP_I18N_KEY[c.key] || c.label)}</option>)}
           </select>
         </div>
         <div>
           <label htmlFor="wx-stage" className="block text-xs font-medium text-ink/60 dark:text-paper/60 mb-1">{t('weatherPage.advisory.stageLabel')}</label>
           <select id="wx-stage" value={stage} onChange={(e) => onStageChange(e.target.value)} disabled={!crop} className={`${selectCls} disabled:opacity-60`}>
             <option value="">{t('weatherPage.advisory.noStage')}</option>
-            {(advisory.growth_stages || []).map((s) => <option key={s.key} value={s.key}>{s.label}</option>)}
+            {(advisory.growth_stages || []).map((s) => <option key={s.key} value={s.key}>{t(STAGE_I18N_KEY[s.key] || s.label)}</option>)}
           </select>
         </div>
       </div>
