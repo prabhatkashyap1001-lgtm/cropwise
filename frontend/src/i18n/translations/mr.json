@@ -1565,7 +1565,7 @@
   "weatherPage.cache.fresh": "जतन केलेली प्रत, {{age}}",
   "weatherPage.cache.stale": "जुनी जतन केलेली प्रत, {{age}}",
   "weatherPage.risk.low": "कमी",
-  "weatherPage.risk.moderate": "मध्यम",
+  "weatherPage.risk.moderate": "मध्यम जोखीम",
   "weatherPage.risk.high": "जास्त",
   "weatherPage.risk.info": "माहिती",
   "weatherPage.empty.title": "ठिकाण निवडा",
