@@ -1558,5 +1558,10 @@
   "weatherPage.condition.showers": "बरखा के झोंका",
   "weatherPage.condition.snowShowers": "बर्फ के झोंका",
   "weatherPage.condition.thunderstorm": "गरज-चमक वाला तूफान",
-  "weatherPage.condition.unknown": "अंजान मौसम"
+  "weatherPage.condition.unknown": "अंजान मौसम",
+  "weatherPage.loc.permissionDenied": "लोकेशन के अनुमति ना मिलल। ब्राउजर सेटिंग में अनुमति दीं भा जगह खोजीं।",
+  "weatherPage.loc.timeout": "लोकेशन के अनुरोध के समय पूरा हो गइल। फेर कोशिश करीं भा जगह खोजीं।",
+  "weatherPage.loc.unavailable": "रउरा डिवाइस से लोकेशन ना मिल सकल। फेर कोशिश करीं भा जगह खोजीं।",
+  "weatherPage.loc.unsupported": "ई ब्राउजर लोकेशन सुविधा के समर्थन ना करेला। एकर बदले जगह खोजीं।",
+  "weatherPage.loc.insecure": "लोकेशन सुविधा खातिर सुरक्षित HTTPS पेज जरूरी बा।"
 }
