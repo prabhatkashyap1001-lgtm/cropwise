@@ -1558,5 +1558,10 @@
   "weatherPage.condition.showers": "বৰষুণৰ চেঁকুৰা",
   "weatherPage.condition.snowShowers": "তুষাৰৰ চেঁকুৰা",
   "weatherPage.condition.thunderstorm": "বজ্ৰ-ধুমুহা",
-  "weatherPage.condition.unknown": "অজ্ঞাত বতৰ"
+  "weatherPage.condition.unknown": "অজ্ঞাত বতৰ",
+  "weatherPage.loc.permissionDenied": "অৱস্থানৰ অনুমতি দিয়া হোৱা নাই। ব্ৰাউজাৰৰ ছেটিংছত অনুমতি দিয়ক অথবা ঠাই বিচাৰক।",
+  "weatherPage.loc.timeout": "অৱস্থানৰ অনুৰোধৰ সময় শেষ হ'ল। পুনৰ চেষ্টা কৰক অথবা ঠাই বিচাৰক।",
+  "weatherPage.loc.unavailable": "আপোনাৰ ডিভাইচৰ পৰা অৱস্থান পোৱা নগ'ল। পুনৰ চেষ্টা কৰক অথবা ঠাই বিচাৰক।",
+  "weatherPage.loc.unsupported": "এই ব্ৰাউজাৰে অৱস্থান সুবিধা সমৰ্থন নকৰে। তাৰ সলনি ঠাই বিচাৰক।",
+  "weatherPage.loc.insecure": "অৱস্থান সুবিধাৰ বাবে সুৰক্ষিত HTTPS পৃষ্ঠা প্ৰয়োজন।"
 }
