@@ -96,3 +96,24 @@ test('weather conditions: every supported WMO code has a localized translation k
     assert.ok(iconForWeatherCode(code))
   }
 })
+
+
+test('weather localization: all 15 locales include every weather key and preserve interpolation placeholders', async () => {
+  const locales = ['en', 'hi', 'mr', 'bn', 'ta', 'te', 'gu', 'kn', 'ml', 'pa', 'or', 'as', 'ur', 'bho', 'mai']
+  const dictionaries = Object.fromEntries(locales.map((locale) => [
+    locale,
+    JSON.parse((await import('node:fs')).readFileSync(new URL(`../src/i18n/translations/${locale}.json`, import.meta.url), 'utf8')),
+  ]))
+  const reference = dictionaries.en
+  const weatherKeys = Object.keys(reference).filter((key) => key.startsWith('weatherPage.'))
+  const placeholders = (value) => [...String(value).matchAll(/{{\\s*([^}\\s]+)\\s*}}/g)].map((match) => match[1]).sort()
+  assert.ok(weatherKeys.length > 0, 'English weather translation keys should exist')
+  for (const locale of locales) {
+    for (const key of weatherKeys) {
+      assert.ok(Object.hasOwn(dictionaries[locale], key), `${locale} is missing ${key}`)
+      assert.deepEqual(placeholders(dictionaries[locale][key]), placeholders(reference[key]), `${locale} has different placeholders for ${key}`)
+      assert.equal(typeof dictionaries[locale][key], 'string', `${locale} value for ${key} must be text`)
+      assert.ok(dictionaries[locale][key].trim().length > 0, `${locale} value for ${key} must not be empty`)
+    }
+  }
+})
