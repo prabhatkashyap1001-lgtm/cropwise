@@ -1,5 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
+import { readFileSync } from 'node:fs'
 import {
   localizeInsight,
   localizeAdvisorySummary,
@@ -50,5 +51,20 @@ test('ETc and limitations are localized and retain calculation values', () => {
     assert.ok(localizeEtcAssumptions(code).length >= 3, `ETc assumptions missing for ${code}`)
     const limitations = localizeLimitations(['This advice uses demonstration data.'], code)
     assert.ok(limitations.length >= 3, `limitations missing for ${code}`)
+  }
+})
+
+test('every supported locale ships the complete weather-page translation key set', () => {
+  const base = new URL('../src/i18n/translations/', import.meta.url)
+  const english = JSON.parse(readFileSync(new URL('en.json', base), 'utf8'))
+  const keys = Object.keys(english).filter((key) => key.startsWith('weatherPage.'))
+  assert.ok(keys.length > 0)
+  for (const code of locales) {
+    const translations = JSON.parse(readFileSync(new URL(`${code}.json`, base), 'utf8'))
+    for (const key of keys) {
+      assert.ok(Object.prototype.hasOwnProperty.call(translations, key), `${code} missing ${key}`)
+      assert.equal(typeof translations[key], 'string', `${code} has invalid value for ${key}`)
+      assert.ok(translations[key].trim(), `${code} has empty value for ${key}`)
+    }
   }
 })
