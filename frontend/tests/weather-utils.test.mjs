@@ -79,3 +79,20 @@ test('format: age, compass and location lines', () => {
   assert.deepEqual(locationLines({ name: 'Bilaspur', admin2: 'Bilaspur', admin1: 'Chhattisgarh', country: 'India' }),
     { title: 'Bilaspur', subtitle: 'Chhattisgarh, India' })
 })
+
+import { weatherConditionKey, iconForWeatherCode } from '../src/utils/weatherCodes.js'
+
+test('weather conditions: every supported WMO code has a localized translation key', () => {
+  const cases = [
+    [0, 'clear'], [1, 'mainlyClear'], [2, 'partlyCloudy'], [3, 'overcast'],
+    [45, 'fog'], [48, 'fog'], [51, 'drizzle'], [55, 'drizzle'],
+    [56, 'freezingDrizzle'], [57, 'freezingDrizzle'], [61, 'rain'], [65, 'rain'],
+    [66, 'freezingRain'], [67, 'freezingRain'], [71, 'snow'], [77, 'snow'],
+    [80, 'showers'], [82, 'showers'], [85, 'snowShowers'], [86, 'snowShowers'],
+    [95, 'thunderstorm'], [96, 'thunderstorm'], [99, 'thunderstorm'], [999, 'unknown'],
+  ]
+  for (const [code, suffix] of cases) {
+    assert.equal(weatherConditionKey(code), `weatherPage.condition.${suffix}`)
+    assert.ok(iconForWeatherCode(code))
+  }
+})
