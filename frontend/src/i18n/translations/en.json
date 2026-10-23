@@ -1685,5 +1685,19 @@
   "weatherPage.advisory.sprayWindows": "Possible spraying windows",
   "weatherPage.advisory.because": "Because:",
   "weatherPage.advisory.basis": "How this was decided",
-  "weatherPage.advisory.limits": "Limits of this advice"
+  "weatherPage.advisory.limits": "Limits of this advice",
+  "weatherPage.condition.clear": "Clear",
+  "weatherPage.condition.mainlyClear": "Mainly clear",
+  "weatherPage.condition.partlyCloudy": "Partly cloudy",
+  "weatherPage.condition.overcast": "Overcast",
+  "weatherPage.condition.fog": "Fog",
+  "weatherPage.condition.drizzle": "Drizzle",
+  "weatherPage.condition.freezingDrizzle": "Freezing drizzle",
+  "weatherPage.condition.rain": "Rain",
+  "weatherPage.condition.freezingRain": "Freezing rain",
+  "weatherPage.condition.snow": "Snow",
+  "weatherPage.condition.showers": "Rain showers",
+  "weatherPage.condition.snowShowers": "Snow showers",
+  "weatherPage.condition.thunderstorm": "Thunderstorm",
+  "weatherPage.condition.unknown": "Unknown conditions"
 }
