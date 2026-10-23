@@ -1656,5 +1656,10 @@
   "weatherPage.condition.showers": "বৃষ্টির ঝাপটা",
   "weatherPage.condition.snowShowers": "তুষারের ঝাপটা",
   "weatherPage.condition.thunderstorm": "বজ্রঝড়",
-  "weatherPage.condition.unknown": "অজানা আবহাওয়া"
+  "weatherPage.condition.unknown": "অজানা আবহাওয়া",
+  "weatherPage.loc.permissionDenied": "অবস্থানের অনুমতি দেওয়া হয়নি। ব্রাউজার সেটিংসে অনুমতি চালু করুন অথবা স্থান খুঁজুন।",
+  "weatherPage.loc.timeout": "অবস্থানের অনুরোধের সময় শেষ হয়েছে। আবার চেষ্টা করুন অথবা স্থান খুঁজুন।",
+  "weatherPage.loc.unavailable": "আপনার ডিভাইস থেকে অবস্থান পাওয়া যায়নি। আবার চেষ্টা করুন অথবা স্থান খুঁজুন।",
+  "weatherPage.loc.unsupported": "এই ব্রাউজারে অবস্থান সুবিধা সমর্থিত নয়। পরিবর্তে স্থান খুঁজুন।",
+  "weatherPage.loc.insecure": "অবস্থান ব্যবহারের জন্য নিরাপদ HTTPS পৃষ্ঠা প্রয়োজন।"
 }
