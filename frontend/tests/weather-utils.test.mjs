@@ -1,6 +1,7 @@
 // Run with: npm test   (Node's built-in runner; no extra dependencies)
 import test from 'node:test'
 import assert from 'node:assert/strict'
+import { readFileSync } from 'node:fs'
 import {
   requestBrowserPosition, stateForPositionError, GEO_STATES, getGeolocationPermission,
 } from '../src/utils/geolocation.js'
@@ -102,7 +103,7 @@ test('weather localization: all 15 locales include every weather key and preserv
   const locales = ['en', 'hi', 'mr', 'bn', 'ta', 'te', 'gu', 'kn', 'ml', 'pa', 'or', 'as', 'ur', 'bho', 'mai']
   const dictionaries = Object.fromEntries(locales.map((locale) => [
     locale,
-    JSON.parse((await import('node:fs')).readFileSync(new URL(`../src/i18n/translations/${locale}.json`, import.meta.url), 'utf8')),
+    JSON.parse(readFileSync(new URL(`../src/i18n/translations/${locale}.json`, import.meta.url), 'utf8')),
   ]))
   const reference = dictionaries.en
   const weatherKeys = Object.keys(reference).filter((key) => key.startsWith('weatherPage.'))
