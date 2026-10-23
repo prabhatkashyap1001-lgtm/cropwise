@@ -1,6 +1,8 @@
 import React from 'react'
 import { Sprout, ShieldCheck, AlertTriangle, AlertOctagon, Info, SprayCan, Wheat, Tractor } from 'lucide-react'
 import { useI18n } from '../../i18n/I18nContext'
+import { formatClock, formatDayShort } from '../../utils/weatherFormat'
+import { localizeInsight, localizeAdvisorySummary, localizeEtc, localizeEtcAssumptions, localizeLimitations } from '../../utils/weatherAdvisoryI18n'
 
 const LEVEL_STYLE = {
   low: { cls: 'bg-emerald-50 text-emerald-800 border-emerald-200 dark:bg-emerald-400/10 dark:text-emerald-200 dark:border-emerald-300/30', Icon: ShieldCheck },
@@ -21,7 +23,8 @@ function LevelBadge({ level }) {
 }
 
 function InsightCard({ item, icon: Icon }) {
-  const { t } = useI18n()
+  const { t, code } = useI18n()
+  const localized = localizeInsight(item, code)
   return (
     <article className="border border-black/5 dark:border-white/10 rounded-xl p-3.5 bg-white dark:bg-white/5">
       <div className="flex items-start justify-between gap-2 mb-1.5">
@@ -30,11 +33,11 @@ function InsightCard({ item, icon: Icon }) {
         </h4>
         <LevelBadge level={item.level} />
       </div>
-      <p className="text-sm text-ink/80 dark:text-paper/80 leading-relaxed">{item.message}</p>
-      <p className="text-xs text-ink/60 dark:text-paper/60 mt-2"><span className="font-semibold">{t('weatherPage.advisory.because')}</span> {item.trigger}</p>
+      <p className="text-sm text-ink/80 dark:text-paper/80 leading-relaxed">{localized.message}</p>
+      <p className="text-xs text-ink/60 dark:text-paper/60 mt-2"><span className="font-semibold">{t('weatherPage.advisory.because')}</span> {localized.trigger}</p>
       <details className="mt-1.5 text-xs text-ink/50 dark:text-paper/50">
         <summary className="cursor-pointer select-none hover:text-ink dark:hover:text-paper focus:outline-none focus-visible:ring-2 focus-visible:ring-marigold rounded">{t('weatherPage.advisory.basis')}</summary>
-        <p className="mt-1 leading-snug">{item.basis}</p>
+        <p className="mt-1 leading-snug">{localized.basis}</p>
       </details>
     </article>
   )
@@ -61,7 +64,7 @@ const selectCls = 'w-full border border-black/10 dark:border-white/15 rounded-lg
  * Advice text comes from the server in English.
  */
 export default function AdvisoryPanel({ advisory, crop, stage, onCropChange, onStageChange }) {
-  const { t } = useI18n()
+  const { t, code } = useI18n()
   if (!advisory) return null
 
   const insights = advisory.insights || []
@@ -99,7 +102,7 @@ export default function AdvisoryPanel({ advisory, crop, stage, onCropChange, onS
         <>
           <div className="rounded-xl bg-sage/30 dark:bg-white/5 px-4 py-3 mb-5" role="note">
             <div className="text-[11px] font-semibold uppercase tracking-wide text-ink/60 dark:text-paper/60 mb-1">{t('weatherPage.advisory.today')}</div>
-            <p className="text-sm leading-relaxed">{advisory.summary}</p>
+            <p className="text-sm leading-relaxed">{localizeAdvisorySummary(code)}</p>
           </div>
 
           <h3 className="font-display font-semibold text-sm mb-2">{t('weatherPage.advisory.risks')}</h3>
@@ -114,9 +117,9 @@ export default function AdvisoryPanel({ advisory, crop, stage, onCropChange, onS
           {advisory.etc && (
             <div className="rounded-xl border border-dashed border-forest/40 dark:border-white/25 p-3.5 mb-5 text-sm">
               <div className="font-semibold mb-1">{t('weatherPage.advisory.etcTitle')}</div>
-              <p className="leading-relaxed">{advisory.etc.label}</p>
+              <p className="leading-relaxed">{localizeEtc(advisory.etc, t(CROP_I18N_KEY[(advisory.supported_crops || []).find((c) => c.label === crop)?.key] || 'weatherPage.advisory.cropLabel'), t(STAGE_I18N_KEY[stage] || 'weatherPage.advisory.noStage'), code)}</p>
               <ul className="list-disc pl-5 mt-2 text-xs text-ink/60 dark:text-paper/60 space-y-0.5">
-                {advisory.etc.assumptions.map((a) => <li key={a}>{a}</li>)}
+                {localizeEtcAssumptions(code).map((a) => <li key={a}>{a}</li>)}
               </ul>
             </div>
           )}
@@ -129,7 +132,7 @@ export default function AdvisoryPanel({ advisory, crop, stage, onCropChange, onS
                 {acts.spraying.windows && acts.spraying.windows.length > 0 && (
                   <ul className="mt-2 flex flex-wrap gap-2" aria-label={t('weatherPage.advisory.sprayWindows')}>
                     {acts.spraying.windows.map((w) => (
-                      <li key={w.start} className="text-xs font-mono-data px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-900 border border-emerald-200 dark:bg-emerald-400/10 dark:text-emerald-200 dark:border-emerald-300/30">{w.label}</li>
+                      <li key={w.start} className="text-xs font-mono-data px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-900 border border-emerald-200 dark:bg-emerald-400/10 dark:text-emerald-200 dark:border-emerald-300/30">{formatDayShort(w.start, code)} {formatClock(w.start, code)} – {formatClock(w.end, code)}</li>
                     ))}
                   </ul>
                 )}
@@ -145,7 +148,7 @@ export default function AdvisoryPanel({ advisory, crop, stage, onCropChange, onS
         <div className="rounded-xl bg-mist dark:bg-white/5 px-4 py-3 text-xs text-ink/70 dark:text-paper/70">
           <div className="font-semibold mb-1">{t('weatherPage.advisory.limits')}</div>
           <ul className="list-disc pl-4 space-y-1 leading-snug">
-            {advisory.limitations.map((l) => <li key={l}>{l}</li>)}
+            {localizeLimitations(advisory.limitations, code).map((l) => <li key={l}>{l}</li>)}
           </ul>
         </div>
       )}
