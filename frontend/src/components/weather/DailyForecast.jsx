@@ -1,7 +1,7 @@
 import React from 'react'
 import { Droplets, Sunrise, Sunset } from 'lucide-react'
 import { useI18n } from '../../i18n/I18nContext'
-import { iconForWeatherCode } from '../../utils/weatherCodes'
+import { iconForWeatherCode, weatherConditionKey } from '../../utils/weatherCodes'
 import { formatDayShort, formatDayLong, formatClock, roundOrDash } from '../../utils/weatherFormat'
 
 /** 7-day FORECAST. The first row is today (highlighted) -- it mixes hours
@@ -24,9 +24,9 @@ export default function DailyForecast({ forecast }) {
                 <div className="text-sm font-semibold">{i === 0 ? t('weatherPage.daily.today') : formatDayShort(d.date)}</div>
                 <div className="text-[10px] text-ink/50 dark:text-paper/50 hidden sm:block">{formatDayLong(d.date)}</div>
               </div>
-              <Icon size={20} className="text-forest dark:text-forest-light" aria-label={d.condition} />
+              <Icon size={20} className="text-forest dark:text-forest-light" aria-label={t(weatherConditionKey(d.weather_code))} />
               <div className="min-w-0">
-                <div className="text-xs text-ink/70 dark:text-paper/70 truncate">{d.condition}</div>
+                <div className="text-xs text-ink/70 dark:text-paper/70 truncate">{t(weatherConditionKey(d.weather_code))}</div>
                 <div className="text-[11px] text-rain dark:text-sky-300 flex items-center gap-2 flex-wrap">
                   <span className="flex items-center gap-0.5"><Droplets size={11} aria-hidden="true" />{roundOrDash(d.rainfall_probability)}%</span>
                   <span>{roundOrDash(d.rainfall_mm, 1)} mm</span>
