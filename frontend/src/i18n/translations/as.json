@@ -1563,5 +1563,9 @@
   "weatherPage.loc.timeout": "অৱস্থান অনুৰোধৰ সময় শেষ হ'ল। পুনৰ চেষ্টা কৰক বা স্থান বিচাৰক।",
   "weatherPage.loc.unavailable": "ডিভাইচৰ পৰা অৱস্থান পোৱা নগ'ল। পুনৰ চেষ্টা কৰক বা স্থান বিচাৰক।",
   "weatherPage.loc.unsupported": "এই ব্ৰাউজাৰে অৱস্থান সুবিধা সমৰ্থন নকৰে। তাৰ পৰিৱৰ্তে স্থান বিচাৰক।",
-  "weatherPage.loc.insecure": "অৱস্থান সুবিধাৰ বাবে সুৰক্ষিত HTTPS পৃষ্ঠা প্ৰয়োজন।"
+  "weatherPage.loc.insecure": "অৱস্থান সুবিধাৰ বাবে সুৰক্ষিত HTTPS পৃষ্ঠা প্ৰয়োজন।",
+  "weatherPage.stage.initial": "প্ৰাৰম্ভিক / সিঁচা",
+  "weatherPage.stage.development": "বিকাশ / উদ্ভিদীয় অৱস্থা",
+  "weatherPage.stage.mid": "মাজৰ ঋতু (ফুল, শস্য বা ফল গঠন)",
+  "weatherPage.stage.late": "শেষৰ ঋতু / পূৰ্ণতা"
 }
