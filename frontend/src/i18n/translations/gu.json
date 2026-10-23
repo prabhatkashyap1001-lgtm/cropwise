@@ -1558,5 +1558,10 @@
   "weatherPage.condition.showers": "વરસાદી ઝાપટાં",
   "weatherPage.condition.snowShowers": "બરફનાં ઝાપટાં",
   "weatherPage.condition.thunderstorm": "ગાજવીજ સાથે વાવાઝોડું",
-  "weatherPage.condition.unknown": "અજાણી સ્થિતિ"
+  "weatherPage.condition.unknown": "અજાણી સ્થિતિ",
+  "weatherPage.loc.permissionDenied": "સ્થાનની પરવાનગી નકારી દેવામાં આવી. બ્રાઉઝર સેટિંગ્સમાં તેને મંજૂરી આપો અથવા સ્થળ શોધો.",
+  "weatherPage.loc.timeout": "સ્થાન વિનંતીનો સમય પૂરો થયો. ફરી પ્રયાસ કરો અથવા સ્થળ શોધો.",
+  "weatherPage.loc.unavailable": "તમારા ઉપકરણમાંથી સ્થાન મળી શક્યું નથી. ફરી પ્રયાસ કરો અથવા સ્થળ શોધો.",
+  "weatherPage.loc.unsupported": "આ બ્રાઉઝર સ્થાન સુવિધાને સમર્થન આપતું નથી. તેના બદલે સ્થળ શોધો.",
+  "weatherPage.loc.insecure": "સ્થાન સુવિધા માટે સુરક્ષિત HTTPS પેજ જરૂરી છે."
 }
