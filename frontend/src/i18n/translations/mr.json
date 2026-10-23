@@ -1643,5 +1643,19 @@
   "weatherPage.advisory.sprayWindows": "फवारणीसाठी संभाव्य वेळ",
   "weatherPage.advisory.because": "कारण:",
   "weatherPage.advisory.basis": "हे कसे ठरले",
-  "weatherPage.advisory.limits": "या सल्ल्याच्या मर्यादा"
+  "weatherPage.advisory.limits": "या सल्ल्याच्या मर्यादा",
+  "weatherPage.condition.clear": "निरभ्र",
+  "weatherPage.condition.mainlyClear": "मुख्यतः निरभ्र",
+  "weatherPage.condition.partlyCloudy": "अंशतः ढगाळ",
+  "weatherPage.condition.overcast": "ढगाळ",
+  "weatherPage.condition.fog": "धुके",
+  "weatherPage.condition.drizzle": "रिमझिम",
+  "weatherPage.condition.freezingDrizzle": "गोठणारी रिमझिम",
+  "weatherPage.condition.rain": "पाऊस",
+  "weatherPage.condition.freezingRain": "गोठणारा पाऊस",
+  "weatherPage.condition.snow": "हिमवर्षाव",
+  "weatherPage.condition.showers": "पावसाच्या सरी",
+  "weatherPage.condition.snowShowers": "बर्फाच्या सरी",
+  "weatherPage.condition.thunderstorm": "मेघगर्जनेसह वादळ",
+  "weatherPage.condition.unknown": "अज्ञात हवामान"
 }
