@@ -38,8 +38,8 @@ export default function DailyForecast({ forecast }) {
                 <span className="text-ink/50 dark:text-paper/50"> / {roundOrDash(d.temp_min)}°</span>
               </div>
               <div className="hidden sm:flex flex-col text-[10px] text-ink/50 dark:text-paper/50 items-end">
-                {d.sunrise && <span className="flex items-center gap-0.5"><Sunrise size={10} aria-hidden="true" />{formatClock(d.sunrise)}</span>}
-                {d.sunset && <span className="flex items-center gap-0.5"><Sunset size={10} aria-hidden="true" />{formatClock(d.sunset)}</span>}
+                {d.sunrise && <span className="flex items-center gap-0.5"><Sunrise size={10} aria-hidden="true" />{formatClock(d.sunrise, code)}</span>}
+                {d.sunset && <span className="flex items-center gap-0.5"><Sunset size={10} aria-hidden="true" />{formatClock(d.sunset, code)}</span>}
               </div>
             </li>
           )
