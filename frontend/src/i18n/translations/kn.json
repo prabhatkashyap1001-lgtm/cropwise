@@ -1563,5 +1563,9 @@
   "weatherPage.loc.timeout": "ಸ್ಥಳ ವಿನಂತಿಯ ಸಮಯ ಮುಗಿದಿದೆ. ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ ಸ್ಥಳ ಹುಡುಕಿ.",
   "weatherPage.loc.unavailable": "ಸಾಧನದಿಂದ ಸ್ಥಳ ಪಡೆಯಲಾಗಲಿಲ್ಲ. ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ ಸ್ಥಳ ಹುಡುಕಿ.",
   "weatherPage.loc.unsupported": "ಈ ಬ್ರೌಸರ್ ಸ್ಥಳ ವೈಶಿಷ್ಟ್ಯವನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ. ಬದಲಿಗೆ ಸ್ಥಳ ಹುಡುಕಿ.",
-  "weatherPage.loc.insecure": "ಸ್ಥಳ ವೈಶಿಷ್ಟ್ಯಕ್ಕೆ ಸುರಕ್ಷಿತ HTTPS ಪುಟ ಅಗತ್ಯ."
+  "weatherPage.loc.insecure": "ಸ್ಥಳ ವೈಶಿಷ್ಟ್ಯಕ್ಕೆ ಸುರಕ್ಷಿತ HTTPS ಪುಟ ಅಗತ್ಯ.",
+  "weatherPage.stage.initial": "ಆರಂಭಿಕ / ಬಿತ್ತನೆ",
+  "weatherPage.stage.development": "ಬೆಳವಣಿಗೆ / ಸಸ್ಯಾವಸ್ಥೆ",
+  "weatherPage.stage.mid": "ಮಧ್ಯ ಋತು (ಹೂ ಬಿಡುವುದು, ಧಾನ್ಯ ಅಥವಾ ಹಣ್ಣು ರೂಪುಗೊಳ್ಳುವುದು)",
+  "weatherPage.stage.late": "ಕೊನೆಯ ಋತು / ಪಕ್ವತೆ"
 }
