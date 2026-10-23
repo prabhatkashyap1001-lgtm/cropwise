@@ -1662,5 +1662,9 @@
   "weatherPage.loc.timeout": "स्थान अनुरोध का समय समाप्त हो गया। फिर कोशिश करें या स्थान खोजें।",
   "weatherPage.loc.unavailable": "आपके डिवाइस से स्थान नहीं मिल सका। फिर कोशिश करें या स्थान खोजें।",
   "weatherPage.loc.unsupported": "यह ब्राउज़र स्थान सुविधा का समर्थन नहीं करता। इसके बजाय स्थान खोजें।",
-  "weatherPage.loc.insecure": "स्थान सुविधा के लिए सुरक्षित HTTPS पेज आवश्यक है।"
+  "weatherPage.loc.insecure": "स्थान सुविधा के लिए सुरक्षित HTTPS पेज आवश्यक है।",
+  "weatherPage.stage.initial": "प्रारंभिक / बुवाई",
+  "weatherPage.stage.development": "विकास / वानस्पतिक अवस्था",
+  "weatherPage.stage.mid": "मध्य मौसम (फूल आना, दाना या फल बनना)",
+  "weatherPage.stage.late": "अंतिम मौसम / पकना"
 }
