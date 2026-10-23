@@ -1,7 +1,7 @@
 import React from 'react'
 import { Droplets, Wind, CloudRain, Gauge, Cloud, Thermometer, Navigation, RefreshCw, Clock } from 'lucide-react'
 import { useI18n } from '../../i18n/I18nContext'
-import { iconForWeatherCode } from '../../utils/weatherCodes'
+import { iconForWeatherCode, weatherConditionKey } from '../../utils/weatherCodes'
 import { formatUpdatedAt, ageParts, compassDirection, roundOrDash } from '../../utils/weatherFormat'
 
 function Metric({ Icon, label, value, sub }) {
@@ -38,12 +38,12 @@ export function WeatherOverviewSkeleton() {
  * `weather` is the API response; `onRefresh` re-fetches.
  */
 export default function WeatherOverview({ weather, onRefresh, refreshing }) {
-  const { t } = useI18n()
+  const { t, code } = useI18n()
   const cur = weather.current
   const Icon = iconForWeatherCode(cur.weather_code, cur.is_day)
   const today = (weather.forecast || [])[0]
   const dir = compassDirection(cur.wind_direction_deg)
-  const updated = formatUpdatedAt(weather.fetched_at, weather.utc_offset_seconds)
+  const updated = formatUpdatedAt(weather.fetched_at, weather.utc_offset_seconds, code)
   const age = ageParts(weather.cache && weather.cache.age_seconds)
   const ageText = age ? t(`weatherPage.age.${age.unit}`, { n: age.value }) : null
   const isLive = weather.status === 'LIVE'
@@ -75,7 +75,7 @@ export default function WeatherOverview({ weather, onRefresh, refreshing }) {
         <Icon size={52} className="text-forest dark:text-forest-light shrink-0" aria-hidden="true" />
         <div>
           <div className="font-mono-data text-4xl font-bold leading-none">{roundOrDash(cur.temperature, 1)}°C</div>
-          <div className="text-sm text-ink/70 dark:text-paper/70 mt-1">{cur.condition}</div>
+          <div className="text-sm text-ink/70 dark:text-paper/70 mt-1">{t(weatherConditionKey(cur.weather_code))}</div>
           {cur.apparent_temperature != null && (
             <div className="text-xs text-ink/60 dark:text-paper/60">{t('weatherPage.now.feelsLike', { temp: roundOrDash(cur.apparent_temperature, 1) })}</div>
           )}

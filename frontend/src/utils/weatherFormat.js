@@ -3,9 +3,19 @@
 // formatted by parsing the string, never through `new Date()` -- that would
 // silently shift them into the viewer's own timezone.
 
-const WEEKDAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 const COMPASS = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
+
+function resolvedLocale(locale) {
+  let requested = locale
+  if (!requested && typeof document !== 'undefined') requested = document.documentElement.lang
+  requested = requested || 'en'
+  try { if (Intl.DateTimeFormat.supportedLocalesOf([requested]).length) return requested } catch (e) {}
+  return ['bho', 'mai'].includes(requested) ? 'hi' : 'en'
+}
+
+function datePart(date, locale, options) {
+  return new Intl.DateTimeFormat(resolvedLocale(locale), { ...options, timeZone: 'UTC' }).format(date)
+}
 
 const LOCAL_RE = /^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}):(\d{2}))?/
 
@@ -18,40 +28,37 @@ export function parseLocal(iso) {
   return { year: +y, month: +mo, day: +d, hour: h == null ? null : +h, minute: mi == null ? null : +mi, weekday: wd }
 }
 
-export function formatHour(iso) {
+export function formatHour(iso, locale) {
   const p = parseLocal(iso)
   if (!p || p.hour == null) return '—'
-  const h12 = p.hour % 12 === 0 ? 12 : p.hour % 12
-  return `${h12} ${p.hour < 12 ? 'AM' : 'PM'}`
+  return datePart(new Date(Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute || 0)), locale, { hour: 'numeric' })
 }
 
-export function formatClock(iso) {
+export function formatClock(iso, locale) {
   const p = parseLocal(iso)
   if (!p || p.hour == null) return '—'
-  return `${String(p.hour).padStart(2, '0')}:${String(p.minute).padStart(2, '0')}`
+  return datePart(new Date(Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute || 0)), locale, { hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
 }
 
-export function formatDayShort(iso) {
+export function formatDayShort(iso, locale) {
   const p = parseLocal(iso)
-  return p ? WEEKDAYS[p.weekday] : '—'
+  return p ? datePart(new Date(Date.UTC(p.year, p.month - 1, p.day)), locale, { weekday: 'short' }) : '—'
 }
 
-export function formatDayLong(iso) {
+export function formatDayLong(iso, locale) {
   const p = parseLocal(iso)
-  return p ? `${WEEKDAYS[p.weekday]} ${p.day} ${MONTHS[p.month - 1]}` : '—'
+  return p ? datePart(new Date(Date.UTC(p.year, p.month - 1, p.day)), locale, { weekday: 'short', day: 'numeric', month: 'short' }) : '—'
 }
 
 /**
  * "Updated" time shown in the LOCATION's own clock: fetched_at is a UTC
  * instant; utcOffsetSeconds comes from the provider for that location.
  */
-export function formatUpdatedAt(fetchedAtIso, utcOffsetSeconds) {
+export function formatUpdatedAt(fetchedAtIso, utcOffsetSeconds, locale) {
   const t = Date.parse(fetchedAtIso || '')
   if (!Number.isFinite(t)) return null
   const shifted = new Date(t + (Number.isFinite(utcOffsetSeconds) ? utcOffsetSeconds : 0) * 1000)
-  const hh = String(shifted.getUTCHours()).padStart(2, '0')
-  const mm = String(shifted.getUTCMinutes()).padStart(2, '0')
-  return `${shifted.getUTCDate()} ${MONTHS[shifted.getUTCMonth()]}, ${hh}:${mm}`
+  return datePart(shifted, locale, { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
 }
 
 // 125 -> {unit:'minutes', value:2}; keeps the wording in i18n (see callers).

@@ -28,7 +28,7 @@ function Banner({ tone, Icon, children, action }) {
 }
 
 export default function Weather() {
-  const { t } = useI18n()
+  const { t, code } = useI18n()
   const { user } = useAuth()
   const [location, setLocation] = useState(() => loadLocation())
   const [{ crop, stage }, setCropChoice] = useState(() => loadCropChoice())
@@ -68,7 +68,7 @@ export default function Weather() {
                 // Explicit choice only: resolve the profile place by name, pick the first match.
                 try {
                   const { api } = await import('../api/client')
-                  const res = await api.searchLocations(profilePlace)
+                  const res = await api.searchLocations(profilePlace, { language: ['bho', 'mai'].includes(code) ? 'hi' : code })
                   const r = res.results && res.results[0]
                   if (r) onSelect({ label: r.label, name: r.name, admin1: r.admin1, admin2: r.admin2, country: r.country, latitude: r.latitude, longitude: r.longitude, source: 'search' })
                 } catch (e) { /* the search box above remains available */ }
@@ -95,7 +95,6 @@ export default function Weather() {
           <CloudOff size={36} className="mx-auto text-clay mb-3" aria-hidden="true" />
           <h2 className="font-display font-semibold text-lg mb-1">{t('weatherPage.error.title')}</h2>
           <p className="text-sm text-ink/60 dark:text-paper/60 mb-4">{t('weatherPage.error.body')}</p>
-          <p className="text-xs text-ink/40 dark:text-paper/40 mb-4 break-words">{error}</p>
           <button type="button" onClick={refresh} className="inline-flex items-center gap-2 bg-forest text-paper font-semibold rounded-lg px-4 py-2.5 text-sm hover:bg-forest-dark min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-marigold">
             <RefreshCw size={14} aria-hidden="true" /> {t('weatherPage.retry')}
           </button>
@@ -126,7 +125,7 @@ export default function Weather() {
           {data.status === 'STALE' && (
             <Banner tone="warn" Icon={AlertTriangle}
               action={<button type="button" onClick={refresh} className="underline text-sm shrink-0">{t('weatherPage.retry')}</button>}>
-              <strong>{t('weatherPage.stale.title')}</strong> {data.notice}
+              <strong>{t('weatherPage.stale.title')}</strong>
             </Banner>
           )}
           {data.status === 'DEMO' && (

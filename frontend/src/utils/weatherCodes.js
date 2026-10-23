@@ -18,3 +18,24 @@ export function iconForWeatherCode(code, isDay = true) {
   if ([95, 96, 99].includes(code)) return CloudLightning
   return Cloud
 }
+
+/**
+ * WMO condition label keys. Keep weather wording in the locale dictionaries,
+ * not in provider-supplied English strings.
+ */
+export function weatherConditionKey(code) {
+  if (code === 0) return 'weatherPage.condition.clear'
+  if (code === 1) return 'weatherPage.condition.mainlyClear'
+  if (code === 2) return 'weatherPage.condition.partlyCloudy'
+  if (code === 3) return 'weatherPage.condition.overcast'
+  if ([45, 48].includes(code)) return 'weatherPage.condition.fog'
+  if ([51, 53, 55].includes(code)) return 'weatherPage.condition.drizzle'
+  if ([56, 57].includes(code)) return 'weatherPage.condition.freezingDrizzle'
+  if ([61, 63, 65].includes(code)) return 'weatherPage.condition.rain'
+  if ([66, 67].includes(code)) return 'weatherPage.condition.freezingRain'
+  if ([71, 73, 75, 77].includes(code)) return 'weatherPage.condition.snow'
+  if ([80, 81, 82].includes(code)) return 'weatherPage.condition.showers'
+  if ([85, 86].includes(code)) return 'weatherPage.condition.snowShowers'
+  if ([95, 96, 99].includes(code)) return 'weatherPage.condition.thunderstorm'
+  return 'weatherPage.condition.unknown'
+}

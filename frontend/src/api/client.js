@@ -115,8 +115,8 @@ export const api = {
     if (opts.growthStage) params.set('growth_stage', opts.growthStage)
     return request(`/weather?${params.toString()}`, { signal: opts.signal })
   },
-  searchLocations: (q, opts = {}) => request(`/weather/geocode/search?q=${encodeURIComponent(q)}&count=${opts.count || 8}`, { signal: opts.signal, timeoutMs: 8000 }),
-  reverseGeocode: (latitude, longitude, opts = {}) => request(`/weather/geocode/reverse?latitude=${latitude}&longitude=${longitude}`, { signal: opts.signal, timeoutMs: 8000 }),
+  searchLocations: (q, opts = {}) => { const params = new URLSearchParams({ q, count: String(opts.count || 8) }); if (opts.language) params.set('language', opts.language); return request(`/weather/geocode/search?${params.toString()}`, { signal: opts.signal, timeoutMs: 8000 }) },
+  reverseGeocode: (latitude, longitude, opts = {}) => { const params = new URLSearchParams({ latitude: String(latitude), longitude: String(longitude) }); if (opts.language) params.set('language', opts.language); return request(`/weather/geocode/reverse?${params.toString()}`, { signal: opts.signal, timeoutMs: 8000 }) },
   getPrices: (crop, market, days = 30, includeDemo = false) => request(`/market/prices?crop=${encodeURIComponent(crop)}&market=${encodeURIComponent(market)}&days=${days}&include_demo=${includeDemo}`),
   compareMarkets: (crop, quantityKg, location) => request(`/market/compare?crop=${encodeURIComponent(crop)}&quantity_kg=${quantityKg}&location=${encodeURIComponent(location)}`),
   getLiveMarkets: (state = 'Chhattisgarh') => request(`/market/live-markets?state=${encodeURIComponent(state)}`),
