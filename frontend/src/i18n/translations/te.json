@@ -1558,5 +1558,10 @@
   "weatherPage.condition.showers": "వర్షపు జల్లులు",
   "weatherPage.condition.snowShowers": "మంచు జల్లులు",
   "weatherPage.condition.thunderstorm": "ఉరుములతో కూడిన తుఫాను",
-  "weatherPage.condition.unknown": "తెలియని పరిస్థితి"
+  "weatherPage.condition.unknown": "తెలియని పరిస్థితి",
+  "weatherPage.loc.permissionDenied": "స్థాన అనుమతి నిరాకరించబడింది. బ్రౌజర్ సెట్టింగ్‌లలో అనుమతించండి లేదా ప్రాంతాన్ని వెతకండి.",
+  "weatherPage.loc.timeout": "స్థాన అభ్యర్థన సమయం ముగిసింది. మళ్లీ ప్రయత్నించండి లేదా ప్రాంతాన్ని వెతకండి.",
+  "weatherPage.loc.unavailable": "మీ పరికరం నుంచి స్థానాన్ని పొందలేకపోయాం. మళ్లీ ప్రయత్నించండి లేదా ప్రాంతాన్ని వెతకండి.",
+  "weatherPage.loc.unsupported": "ఈ బ్రౌజర్ స్థాన సదుపాయాన్ని మద్దతు ఇవ్వదు. బదులుగా ప్రాంతాన్ని వెతకండి.",
+  "weatherPage.loc.insecure": "స్థాన సదుపాయానికి సురక్షిత HTTPS పేజీ అవసరం."
 }
