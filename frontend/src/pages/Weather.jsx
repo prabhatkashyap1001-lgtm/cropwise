@@ -95,7 +95,6 @@ export default function Weather() {
           <CloudOff size={36} className="mx-auto text-clay mb-3" aria-hidden="true" />
           <h2 className="font-display font-semibold text-lg mb-1">{t('weatherPage.error.title')}</h2>
           <p className="text-sm text-ink/60 dark:text-paper/60 mb-4">{t('weatherPage.error.body')}</p>
-          <p className="text-xs text-ink/40 dark:text-paper/40 mb-4 break-words">{error}</p>
           <button type="button" onClick={refresh} className="inline-flex items-center gap-2 bg-forest text-paper font-semibold rounded-lg px-4 py-2.5 text-sm hover:bg-forest-dark min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-marigold">
             <RefreshCw size={14} aria-hidden="true" /> {t('weatherPage.retry')}
           </button>
@@ -126,7 +125,7 @@ export default function Weather() {
           {data.status === 'STALE' && (
             <Banner tone="warn" Icon={AlertTriangle}
               action={<button type="button" onClick={refresh} className="underline text-sm shrink-0">{t('weatherPage.retry')}</button>}>
-              <strong>{t('weatherPage.stale.title')}</strong> {data.notice}
+              <strong>{t('weatherPage.stale.title')}</strong> {t('weatherPage.cache.stale', { age: '' }).replace(/,\s*$/, '')}
             </Banner>
           )}
           {data.status === 'DEMO' && (
