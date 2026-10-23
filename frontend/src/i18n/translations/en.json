@@ -1704,5 +1704,9 @@
   "weatherPage.loc.timeout": "Location request timed out. Try again or search for a place.",
   "weatherPage.loc.unavailable": "Your device could not provide a location. Try again or search for a place.",
   "weatherPage.loc.unsupported": "Location access is not supported by this browser. Search for a place instead.",
-  "weatherPage.loc.insecure": "Location access requires a secure HTTPS page."
+  "weatherPage.loc.insecure": "Location access requires a secure HTTPS page.",
+  "weatherPage.stage.initial": "Initial / sowing",
+  "weatherPage.stage.development": "Development / vegetative",
+  "weatherPage.stage.mid": "Mid-season (flowering, grain or fruit set)",
+  "weatherPage.stage.late": "Late season / maturity"
 }
