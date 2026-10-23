@@ -1657,5 +1657,10 @@
   "weatherPage.condition.showers": "पावसाच्या सरी",
   "weatherPage.condition.snowShowers": "बर्फाच्या सरी",
   "weatherPage.condition.thunderstorm": "मेघगर्जनेसह वादळ",
-  "weatherPage.condition.unknown": "अज्ञात हवामान"
+  "weatherPage.condition.unknown": "अज्ञात हवामान",
+  "weatherPage.loc.permissionDenied": "स्थानाची परवानगी नाकारली गेली. ब्राउझर सेटिंग्जमध्ये ती सुरू करा किंवा ठिकाण शोधा.",
+  "weatherPage.loc.timeout": "स्थान विनंतीची वेळ संपली. पुन्हा प्रयत्न करा किंवा ठिकाण शोधा.",
+  "weatherPage.loc.unavailable": "तुमच्या डिव्हाइसकडून स्थान मिळू शकले नाही. पुन्हा प्रयत्न करा किंवा ठिकाण शोधा.",
+  "weatherPage.loc.unsupported": "हा ब्राउझर स्थान सुविधेला समर्थन देत नाही. त्याऐवजी ठिकाण शोधा.",
+  "weatherPage.loc.insecure": "स्थान सुविधेसाठी सुरक्षित HTTPS पृष्ठ आवश्यक आहे."
 }
