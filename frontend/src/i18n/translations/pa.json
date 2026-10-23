@@ -1563,5 +1563,9 @@
   "weatherPage.loc.timeout": "ਥਾਂ ਦੀ ਬੇਨਤੀ ਦਾ ਸਮਾਂ ਮੁੱਕ ਗਿਆ। ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਥਾਂ ਖੋਜੋ।",
   "weatherPage.loc.unavailable": "ਡਿਵਾਈਸ ਤੋਂ ਥਾਂ ਨਹੀਂ ਮਿਲ ਸਕੀ। ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਥਾਂ ਖੋਜੋ।",
   "weatherPage.loc.unsupported": "ਇਹ ਬ੍ਰਾਊਜ਼ਰ ਥਾਂ ਦੀ ਸਹੂਲਤ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦਾ। ਇਸ ਦੀ ਥਾਂ ਖੋਜੋ।",
-  "weatherPage.loc.insecure": "ਥਾਂ ਦੀ ਸਹੂਲਤ ਲਈ ਸੁਰੱਖਿਅਤ HTTPS ਪੰਨਾ ਲੋੜੀਂਦਾ ਹੈ."
+  "weatherPage.loc.insecure": "ਥਾਂ ਦੀ ਸਹੂਲਤ ਲਈ ਸੁਰੱਖਿਅਤ HTTPS ਪੰਨਾ ਲੋੜੀਂਦਾ ਹੈ.",
+  "weatherPage.stage.initial": "ਸ਼ੁਰੂਆਤੀ / ਬਿਜਾਈ",
+  "weatherPage.stage.development": "ਵਿਕਾਸ / ਬਨਸਪਤੀ ਅਵਸਥਾ",
+  "weatherPage.stage.mid": "ਮੱਧ ਮੌਸਮ (ਫੁੱਲ, ਦਾਣਾ ਜਾਂ ਫਲ ਬਣਨਾ)",
+  "weatherPage.stage.late": "ਅਖੀਰਲਾ ਮੌਸਮ / ਪੱਕਣਾ"
 }
