@@ -1563,5 +1563,9 @@
   "weatherPage.loc.timeout": "स्थान अनुरोधक समय समाप्त भेल। फेर प्रयास करू वा स्थान खोजू।",
   "weatherPage.loc.unavailable": "डिवाइससँ स्थान नहि भेटल। फेर प्रयास करू वा स्थान खोजू।",
   "weatherPage.loc.unsupported": "ई ब्राउजर स्थान सुविधा समर्थित नहि करैत अछि। स्थान खोजू।",
-  "weatherPage.loc.insecure": "स्थान सुविधाक लेल सुरक्षित HTTPS पृष्ठ आवश्यक अछि।"
+  "weatherPage.loc.insecure": "स्थान सुविधाक लेल सुरक्षित HTTPS पृष्ठ आवश्यक अछि।",
+  "weatherPage.stage.initial": "प्रारंभिक / बुआई",
+  "weatherPage.stage.development": "विकास / वनस्पतिक अवस्था",
+  "weatherPage.stage.mid": "मध्य मौसम (फूल, दाना वा फल बनबाक समय)",
+  "weatherPage.stage.late": "अंतिम मौसम / पकबाक अवस्था"
 }
