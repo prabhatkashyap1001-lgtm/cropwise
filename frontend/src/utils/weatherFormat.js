@@ -31,7 +31,7 @@ export function parseLocal(iso) {
 export function formatHour(iso, locale) {
   const p = parseLocal(iso)
   if (!p || p.hour == null) return '—'
-  return datePart(new Date(Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute || 0)), locale, { hour: 'numeric', hour12: true })
+  return datePart(new Date(Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute || 0)), locale, { hour: 'numeric' })
 }
 
 export function formatClock(iso, locale) {
