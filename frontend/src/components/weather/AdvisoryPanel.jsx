@@ -102,7 +102,7 @@ export default function AdvisoryPanel({ advisory, crop, stage, onCropChange, onS
         <>
           <div className="rounded-xl bg-sage/30 dark:bg-white/5 px-4 py-3 mb-5" role="note">
             <div className="text-[11px] font-semibold uppercase tracking-wide text-ink/60 dark:text-paper/60 mb-1">{t('weatherPage.advisory.today')}</div>
-            <p className="text-sm leading-relaxed">{localizeAdvisorySummary(code)}</p>
+            <p className="text-sm leading-relaxed">{localizeAdvisorySummary(code, advisory)}</p>
           </div>
 
           <h3 className="font-display font-semibold text-sm mb-2">{t('weatherPage.advisory.risks')}</h3>
