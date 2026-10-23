@@ -33,7 +33,7 @@ const GEO_MESSAGE_KEY = {
  * Props: selected (location | null), onSelect(location), onClear().
  */
 export default function LocationPicker({ selected, onSelect, onClear }) {
-  const { t } = useI18n()
+  const { t, code } = useI18n()
   const uid = useId()
   const listId = `${uid}-list`
   const inputRef = useRef(null)
@@ -55,12 +55,12 @@ export default function LocationPicker({ selected, onSelect, onClear }) {
     searchAbort.current = controller
     setSearch((s) => ({ status: 'loading', results: s.results }))
     const timer = setTimeout(() => {
-      api.searchLocations(q, { signal: controller.signal })
+      api.searchLocations(q, { signal: controller.signal, language: ['bho', 'mai'].includes(code) ? 'hi' : code })
         .then((res) => { setSearch({ status: 'done', results: res.results || [] }); setActive(-1) })
         .catch((err) => { if (err && err.name === 'AbortError') return; setSearch({ status: 'error', results: [], message: err && err.message }) })
     }, DEBOUNCE_MS)
     return () => { clearTimeout(timer); controller.abort() }
-  }, [query])
+  }, [query, code])
 
   useEffect(() => {
     const onDocClick = (e) => { if (rootRef.current && !rootRef.current.contains(e.target)) setOpen(false) }
@@ -111,7 +111,7 @@ export default function LocationPicker({ selected, onSelect, onClear }) {
     }
     let place = null
     try {
-      place = await api.reverseGeocode(pos.latitude, pos.longitude)
+      place = await api.reverseGeocode(pos.latitude, pos.longitude, { language: ['bho', 'mai'].includes(code) ? 'hi' : code })
     } catch (e) { /* fall through: show coordinates, never an invented name */ }
     const lat = roundCoord(pos.latitude), lon = roundCoord(pos.longitude)
     const coordsLabel = t('weatherPage.loc.coordsLabel', { lat: lat.toFixed(2), lon: lon.toFixed(2) })
