@@ -1544,5 +1544,19 @@
   "weatherPage.advisory.sprayWindows": "छिड़काव के संभावित समय",
   "weatherPage.advisory.because": "क्योंकि:",
   "weatherPage.advisory.basis": "यह कैसे तय हुआ",
-  "weatherPage.advisory.limits": "इस सलाह की सीमाएँ"
+  "weatherPage.advisory.limits": "इस सलाह की सीमाएँ",
+  "weatherPage.condition.clear": "ಸ್ವಚ್ಛ ಆಕಾಶ",
+  "weatherPage.condition.mainlyClear": "ಮುಖ್ಯವಾಗಿ ಸ್ವಚ್ಛ",
+  "weatherPage.condition.partlyCloudy": "ಭಾಗಶಃ ಮೋಡ ಕವಿದಿದೆ",
+  "weatherPage.condition.overcast": "ಮೋಡ ಕವಿದಿದೆ",
+  "weatherPage.condition.fog": "ಮಂಜು",
+  "weatherPage.condition.drizzle": "ತುಂತುರು ಮಳೆ",
+  "weatherPage.condition.freezingDrizzle": "ಗಟ್ಟಿಯಾಗುವ ತುಂತುರು ಮಳೆ",
+  "weatherPage.condition.rain": "ಮಳೆ",
+  "weatherPage.condition.freezingRain": "ಗಟ್ಟಿಯಾಗುವ ಮಳೆ",
+  "weatherPage.condition.snow": "ಹಿಮಪಾತ",
+  "weatherPage.condition.showers": "ಮಳೆಯ ಸಿಡಿಮದ್ದು",
+  "weatherPage.condition.snowShowers": "ಹಿಮದ ಸಿಡಿಮದ್ದು",
+  "weatherPage.condition.thunderstorm": "ಗುಡುಗು ಸಹಿತ ಬಿರುಗಾಳಿ",
+  "weatherPage.condition.unknown": "ಅಜ್ಞಾತ ಹವಾಮಾನ"
 }
