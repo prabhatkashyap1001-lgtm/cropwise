@@ -1558,5 +1558,10 @@
   "weatherPage.condition.showers": "ਮੀਂਹ ਦੀਆਂ ਛਿੱਟਾਂ",
   "weatherPage.condition.snowShowers": "ਬਰਫ਼ ਦੀਆਂ ਛਿੱਟਾਂ",
   "weatherPage.condition.thunderstorm": "ਗਰਜ-ਤੂਫ਼ਾਨ",
-  "weatherPage.condition.unknown": "ਅਣਜਾਣ ਮੌਸਮ"
+  "weatherPage.condition.unknown": "ਅਣਜਾਣ ਮੌਸਮ",
+  "weatherPage.loc.permissionDenied": "ਟਿਕਾਣੇ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਮਿਲੀ। ਬ੍ਰਾਊਜ਼ਰ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਇਜਾਜ਼ਤ ਦਿਓ ਜਾਂ ਥਾਂ ਖੋਜੋ।",
+  "weatherPage.loc.timeout": "ਟਿਕਾਣੇ ਦੀ ਬੇਨਤੀ ਦਾ ਸਮਾਂ ਮੁੱਕ ਗਿਆ। ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਥਾਂ ਖੋਜੋ।",
+  "weatherPage.loc.unavailable": "ਤੁਹਾਡੀ ਡਿਵਾਈਸ ਤੋਂ ਟਿਕਾਣਾ ਨਹੀਂ ਮਿਲ ਸਕਿਆ। ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਥਾਂ ਖੋਜੋ।",
+  "weatherPage.loc.unsupported": "ਇਹ ਬ੍ਰਾਊਜ਼ਰ ਟਿਕਾਣਾ ਸਹੂਲਤ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦਾ। ਇਸ ਦੀ ਥਾਂ ਖੋਜੋ।",
+  "weatherPage.loc.insecure": "ਟਿਕਾਣਾ ਸਹੂਲਤ ਲਈ ਸੁਰੱਖਿਅਤ HTTPS ਪੰਨਾ ਲੋੜੀਂਦਾ ਹੈ।"
 }
