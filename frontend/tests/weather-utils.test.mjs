@@ -107,7 +107,7 @@ test('weather localization: all 15 locales include every weather key and preserv
   ]))
   const reference = dictionaries.en
   const weatherKeys = Object.keys(reference).filter((key) => key.startsWith('weatherPage.'))
-  const placeholders = (value) => [...String(value).matchAll(/{{\\s*([^}\\s]+)\\s*}}/g)].map((match) => match[1]).sort()
+  const placeholders = (value) => [...String(value).matchAll(/{{\s*([^}\s]+)\s*}}/g)].map((match) => match[1]).sort()
   assert.ok(weatherKeys.length > 0, 'English weather translation keys should exist')
   for (const locale of locales) {
     for (const key of weatherKeys) {
