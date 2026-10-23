@@ -1454,7 +1454,7 @@
   "buyerDemands.paymentTerms.advance50BalanceOnDelivery": "50% advance, balance on delivery",
   "buyerDemands.paymentTerms.fullPaymentOnDelivery": "Full payment on delivery",
   "buyerDemands.paymentTerms.fullPaymentWithin7Days": "Full payment within 7 days",
-  "weatherPage.title": "Weather",
+  "weatherPage.title": "வானிலை",
   "weatherPage.subtitle": "உங்கள் இருப்பிடத்திற்கான முன்னறிவிப்பும் வானிலை சார்ந்த விவசாய வழிகாட்டுதலும். முன்னறிவிப்பு உறுதியல்ல; கணிப்பு மட்டுமே.",
   "weatherPage.retry": "மீண்டும் முயற்சிக்கவும்",
   "weatherPage.updated": "புதுப்பிக்கப்பட்டது {{time}}",
