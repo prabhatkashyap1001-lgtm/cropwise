@@ -125,7 +125,7 @@ export default function Weather() {
           {data.status === 'STALE' && (
             <Banner tone="warn" Icon={AlertTriangle}
               action={<button type="button" onClick={refresh} className="underline text-sm shrink-0">{t('weatherPage.retry')}</button>}>
-              <strong>{t('weatherPage.stale.title')}</strong> {t('weatherPage.cache.stale', { age: '' }).replace(/,\s*$/, '')}
+              <strong>{t('weatherPage.stale.title')}</strong>
             </Banner>
           )}
           {data.status === 'DEMO' && (
