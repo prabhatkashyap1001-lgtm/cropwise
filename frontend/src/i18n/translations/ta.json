@@ -1558,5 +1558,10 @@
   "weatherPage.condition.showers": "மழைச் சாரல்",
   "weatherPage.condition.snowShowers": "பனிச் சாரல்",
   "weatherPage.condition.thunderstorm": "இடியுடன் கூடிய புயல்",
-  "weatherPage.condition.unknown": "தெரியாத நிலை"
+  "weatherPage.condition.unknown": "தெரியாத நிலை",
+  "weatherPage.loc.permissionDenied": "இருப்பிட அனுமதி மறுக்கப்பட்டது. உலாவி அமைப்புகளில் அனுமதியை இயக்கவும் அல்லது இடத்தைத் தேடவும்.",
+  "weatherPage.loc.timeout": "இருப்பிடக் கோரிக்கைக்கான நேரம் முடிந்தது. மீண்டும் முயற்சிக்கவும் அல்லது இடத்தைத் தேடவும்.",
+  "weatherPage.loc.unavailable": "உங்கள் சாதனத்திலிருந்து இருப்பிடத்தைப் பெற முடியவில்லை. மீண்டும் முயற்சிக்கவும் அல்லது இடத்தைத் தேடவும்.",
+  "weatherPage.loc.unsupported": "இந்த உலாவி இருப்பிட வசதியை ஆதரிக்கவில்லை. வேறு இடத்தைத் தேடவும்.",
+  "weatherPage.loc.insecure": "இருப்பிட வசதிக்கு பாதுகாப்பான HTTPS பக்கம் தேவை."
 }
