@@ -38,12 +38,12 @@ export function WeatherOverviewSkeleton() {
  * `weather` is the API response; `onRefresh` re-fetches.
  */
 export default function WeatherOverview({ weather, onRefresh, refreshing }) {
-  const { t } = useI18n()
+  const { t, code } = useI18n()
   const cur = weather.current
   const Icon = iconForWeatherCode(cur.weather_code, cur.is_day)
   const today = (weather.forecast || [])[0]
   const dir = compassDirection(cur.wind_direction_deg)
-  const updated = formatUpdatedAt(weather.fetched_at, weather.utc_offset_seconds)
+  const updated = formatUpdatedAt(weather.fetched_at, weather.utc_offset_seconds, code)
   const age = ageParts(weather.cache && weather.cache.age_seconds)
   const ageText = age ? t(`weatherPage.age.${age.unit}`, { n: age.value }) : null
   const isLive = weather.status === 'LIVE'
