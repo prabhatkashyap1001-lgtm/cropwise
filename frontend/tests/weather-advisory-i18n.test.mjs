@@ -68,3 +68,27 @@ test('every supported locale ships the complete weather-page translation key set
     }
   }
 })
+
+test('every advisory type has localized title, message, and trigger in every language', () => {
+  const samples = [
+    { id: 'heat', level: 'high', trigger: 'Highest forecast temperature: 38°C on 2026-10-26.', when: '2026-10-26' },
+    { id: 'cold', level: 'moderate', trigger: 'Lowest forecast temperature: 4°C on 2026-10-26.', when: '2026-10-26' },
+    { id: 'wind', level: 'moderate', trigger: 'Peak forecast gusts: 45 km/h on 2026-10-26.', when: '2026-10-26' },
+    { id: 'heavy_rain', level: 'high', trigger: 'Largest 24 h forecast: 70 mm (heavy) on 2026-10-26.', when: '2026-10-26' },
+    { id: 'rain_outlook', level: 'info', trigger: 'Forecast rain: 4 mm in 3 days, 12 mm in 7 days.' },
+    { id: 'et0', level: 'info', trigger: 'ET₀ 4 mm/day average, 28 mm total over 7 days.' },
+    { id: 'harvest_window', level: 'info', trigger: '3 consecutive dry days.', window: { days: 3 } },
+    { id: 'sowing_window', level: 'info', trigger: '5 of 7 days suitable.', window: { days: ['a', 'b', 'c', 'd', 'e'] } },
+    { id: 'spray_window', level: 'info', trigger: '1 suitable window found.', windows: [{ start: '2026-10-26T09:00' }] },
+  ]
+  for (const code of locales) {
+    for (const sample of samples) {
+      const localized = localizeInsight({ ...sample, title: 'English title', message: 'English message' }, code)
+      assert.ok(localized.title, `${code} missing title for ${sample.id}`)
+      assert.ok(localized.message, `${code} missing message for ${sample.id}`)
+      assert.ok(localized.trigger, `${code} missing trigger for ${sample.id}`)
+      assert.notEqual(localized.title, 'English title', `${code} has English title for ${sample.id}`)
+      assert.notEqual(localized.message, 'English message', `${code} has English message for ${sample.id}`)
+    }
+  }
+})
