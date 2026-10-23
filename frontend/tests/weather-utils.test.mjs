@@ -9,7 +9,7 @@ import {
   loadLocation, saveLocation, clearLocation, isValidLocation, loadCropChoice, saveCropChoice,
 } from '../src/utils/weatherLocationStore.js'
 import {
-  formatHour, formatClock, formatDayShort, formatUpdatedAt, ageParts, compassDirection, locationLines,
+  formatHour, formatClock, formatDayShort, formatDayLong, formatUpdatedAt, ageParts, compassDirection, locationLines,
 } from '../src/utils/weatherFormat.js'
 
 const navWith = (impl) => ({ geolocation: { getCurrentPosition: impl } })
