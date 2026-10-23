@@ -5,6 +5,18 @@
 
 const COMPASS = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
 
+function resolvedLocale(locale) {
+  let requested = locale
+  if (!requested && typeof document !== 'undefined') requested = document.documentElement.lang
+  requested = requested || 'en'
+  try { if (Intl.DateTimeFormat.supportedLocalesOf([requested]).length) return requested } catch (e) {}
+  return ['bho', 'mai'].includes(requested) ? 'hi' : 'en'
+}
+
+function datePart(date, locale, options) {
+  return new Intl.DateTimeFormat(resolvedLocale(locale), { ...options, timeZone: 'UTC' }).format(date)
+}
+
 const LOCAL_RE = /^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}):(\d{2}))?/
 
 export function parseLocal(iso) {
