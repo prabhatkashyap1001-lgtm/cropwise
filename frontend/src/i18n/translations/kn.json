@@ -1558,5 +1558,10 @@
   "weatherPage.condition.showers": "ಮಳೆಯ ಸಿಡಿಮದ್ದು",
   "weatherPage.condition.snowShowers": "ಹಿಮದ ಸಿಡಿಮದ್ದು",
   "weatherPage.condition.thunderstorm": "ಗುಡುಗು ಸಹಿತ ಬಿರುಗಾಳಿ",
-  "weatherPage.condition.unknown": "ಅಜ್ಞಾತ ಹವಾಮಾನ"
+  "weatherPage.condition.unknown": "ಅಜ್ಞಾತ ಹವಾಮಾನ",
+  "weatherPage.loc.permissionDenied": "ಸ್ಥಳ ಅನುಮತಿಯನ್ನು ನಿರಾಕರಿಸಲಾಗಿದೆ. ಬ್ರೌಸರ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಅನುಮತಿಸಿ ಅಥವಾ ಸ್ಥಳವನ್ನು ಹುಡುಕಿ.",
+  "weatherPage.loc.timeout": "ಸ್ಥಳ ವಿನಂತಿಯ ಸಮಯ ಮೀರಿದೆ. ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ ಸ್ಥಳ ಹುಡುಕಿ.",
+  "weatherPage.loc.unavailable": "ನಿಮ್ಮ ಸಾಧನದಿಂದ ಸ್ಥಳ ಪಡೆಯಲಾಗಲಿಲ್ಲ. ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ ಸ್ಥಳ ಹುಡುಕಿ.",
+  "weatherPage.loc.unsupported": "ಈ ಬ್ರೌಸರ್ ಸ್ಥಳ ಸೌಲಭ್ಯವನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ. ಬದಲಿಗೆ ಸ್ಥಳ ಹುಡುಕಿ.",
+  "weatherPage.loc.insecure": "ಸ್ಥಳ ಸೌಲಭ್ಯಕ್ಕೆ ಸುರಕ್ಷಿತ HTTPS ಪುಟ ಅಗತ್ಯವಿದೆ."
 }
