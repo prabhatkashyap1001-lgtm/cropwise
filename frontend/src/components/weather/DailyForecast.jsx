@@ -7,7 +7,7 @@ import { formatDayShort, formatDayLong, formatClock, roundOrDash } from '../../u
 /** 7-day FORECAST. The first row is today (highlighted) -- it mixes hours
  *  already past with hours to come, so its values describe the whole day. */
 export default function DailyForecast({ forecast }) {
-  const { t } = useI18n()
+  const { t, code } = useI18n()
   return (
     <section aria-labelledby="wx-daily-title" className="bg-white dark:bg-white/5 rounded-2xl shadow-card border border-black/5 dark:border-white/10 p-4 sm:p-5">
       <div className="flex items-baseline justify-between gap-2 mb-3 flex-wrap">
@@ -21,8 +21,8 @@ export default function DailyForecast({ forecast }) {
             <li key={d.date} aria-current={i === 0 ? 'date' : undefined}
               className={`py-2.5 px-2 -mx-2 rounded-lg grid grid-cols-[3.2rem_1.6rem_1fr_auto] sm:grid-cols-[5.5rem_1.6rem_1fr_auto_auto] items-center gap-x-3 gap-y-1 ${i === 0 ? 'bg-forest/5 dark:bg-white/5' : ''}`}>
               <div>
-                <div className="text-sm font-semibold">{i === 0 ? t('weatherPage.daily.today') : formatDayShort(d.date)}</div>
-                <div className="text-[10px] text-ink/50 dark:text-paper/50 hidden sm:block">{formatDayLong(d.date)}</div>
+                <div className="text-sm font-semibold">{i === 0 ? t('weatherPage.daily.today') : formatDayShort(d.date, code)}</div>
+                <div className="text-[10px] text-ink/50 dark:text-paper/50 hidden sm:block">{formatDayLong(d.date, code)}</div>
               </div>
               <Icon size={20} className="text-forest dark:text-forest-light" aria-label={t(weatherConditionKey(d.weather_code))} />
               <div className="min-w-0">
