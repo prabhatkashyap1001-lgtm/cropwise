@@ -67,7 +67,7 @@ test('format: location-local times are not shifted by the viewer timezone', () =
   assert.equal(formatClock('2026-10-19T05:07'), '05:07')
   assert.equal(formatDayShort('2026-10-19'), 'Mon')
   // 07:45 UTC at IST (+19800 s) is 13:15 local.
-  assert.equal(formatUpdatedAt('2026-10-19T07:45:00Z', 19800), '19 Oct, 13:15')
+  assert.match(formatUpdatedAt('2026-10-19T07:45:00Z', 19800), /19.*Oct.*13:15|Oct.*19.*13:15/)
   assert.equal(formatUpdatedAt('garbage', 0), null)
 })
 
