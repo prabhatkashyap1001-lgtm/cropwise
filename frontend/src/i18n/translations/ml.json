@@ -1558,5 +1558,10 @@
   "weatherPage.condition.showers": "മഴച്ചാറ്റൽ",
   "weatherPage.condition.snowShowers": "മഞ്ഞുചാറ്റൽ",
   "weatherPage.condition.thunderstorm": "ഇടിമിന്നലോടുകൂടിയ കൊടുങ്കാറ്റ്",
-  "weatherPage.condition.unknown": "അറിയാത്ത കാലാവസ്ഥ"
+  "weatherPage.condition.unknown": "അറിയാത്ത കാലാവസ്ഥ",
+  "weatherPage.loc.permissionDenied": "ലൊക്കേഷൻ അനുമതി നിഷേധിച്ചു. ബ്രൗസർ ക്രമീകരണങ്ങളിൽ അനുമതി നൽകുക അല്ലെങ്കിൽ സ്ഥലം തിരയുക.",
+  "weatherPage.loc.timeout": "ലൊക്കേഷൻ അഭ്യർത്ഥനയുടെ സമയം കഴിഞ്ഞു. വീണ്ടും ശ്രമിക്കുക അല്ലെങ്കിൽ സ്ഥലം തിരയുക.",
+  "weatherPage.loc.unavailable": "നിങ്ങളുടെ ഉപകരണത്തിൽ നിന്ന് സ്ഥലം ലഭിച്ചില്ല. വീണ്ടും ശ്രമിക്കുക അല്ലെങ്കിൽ സ്ഥലം തിരയുക.",
+  "weatherPage.loc.unsupported": "ഈ ബ്രൗസർ ലൊക്കേഷൻ സൗകര്യം പിന്തുണയ്ക്കുന്നില്ല. പകരം സ്ഥലം തിരയുക.",
+  "weatherPage.loc.insecure": "ലൊക്കേഷൻ സൗകര്യത്തിന് സുരക്ഷിത HTTPS പേജ് ആവശ്യമാണ്."
 }
