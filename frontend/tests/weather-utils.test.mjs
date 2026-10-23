@@ -71,12 +71,17 @@ test('format: location-local times are not shifted by the viewer timezone', () =
   assert.equal(formatUpdatedAt('garbage', 0), null)
 })
 
-test('format: calendar labels and clocks follow the selected locale without timezone shifting', () => {
+test('format: calendar labels and clocks follow every supported locale without timezone shifting', () => {
+  const locales = ['en', 'hi', 'mr', 'bn', 'ta', 'te', 'gu', 'kn', 'ml', 'pa', 'or', 'as', 'ur', 'bho', 'mai']
+  for (const locale of locales) {
+    assert.ok(formatDayShort('2026-10-19', locale).length > 0, locale)
+    assert.ok(formatDayLong('2026-10-19', locale).length > 0, locale)
+    assert.ok(formatHour('2026-10-19T13:00', locale).length > 0, locale)
+    assert.ok(formatClock('2026-10-19T05:07', locale).length > 0, locale)
+    assert.ok(formatUpdatedAt('2026-10-19T07:45:00Z', 19800, locale).length > 0, locale)
+  }
   assert.notEqual(formatDayShort('2026-10-19', 'en'), formatDayShort('2026-10-19', 'hi'))
   assert.notEqual(formatDayLong('2026-10-19', 'en'), formatDayLong('2026-10-19', 'hi'))
-  assert.ok(formatHour('2026-10-19T13:00', 'hi').length > 0)
-  assert.ok(formatClock('2026-10-19T05:07', 'hi').length > 0)
-  assert.ok(formatUpdatedAt('2026-10-19T07:45:00Z', 19800, 'hi').length > 0)
 })
 
 test('format: age, compass and location lines', () => {
