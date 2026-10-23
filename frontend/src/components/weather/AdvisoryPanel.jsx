@@ -61,7 +61,7 @@ const selectCls = 'w-full border border-black/10 dark:border-white/15 rounded-lg
 /**
  * Rule-based farming advisory (computed server-side by farm_advisory.py).
  * Props: advisory (API object), crop/stage + onCropChange/onStageChange.
- * Advice text comes from the server in English.
+ * The API returns rule-based English advice; the client localizes presentation for all 15 supported languages.
  */
 export default function AdvisoryPanel({ advisory, crop, stage, onCropChange, onStageChange }) {
   const { t, code } = useI18n()
