@@ -1552,7 +1552,7 @@
   "reputation.admin.underReview": "পর্যালোচনাধীন করুন",
   "reputation.admin.uphold": "গ্রহণ করুন (প্রমাণ বাদ)",
   "reputation.admin.reject": "প্রত্যাখ্যান করুন (প্রমাণ গণনায়)",
-  "weatherPage.title": "Weather",
+  "weatherPage.title": "আবহাওয়া",
   "weatherPage.subtitle": "আপনার অবস্থানের পূর্বাভাস এবং আবহাওয়া-ভিত্তিক কৃষি নির্দেশনা। পূর্বাভাস অনুমান, নিশ্চয়তা নয়।",
   "weatherPage.retry": "আবার চেষ্টা করুন",
   "weatherPage.updated": "আপডেট হয়েছে {{time}}",
