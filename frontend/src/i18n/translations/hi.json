@@ -1657,5 +1657,10 @@
   "weatherPage.condition.showers": "बारिश की बौछारें",
   "weatherPage.condition.snowShowers": "बर्फ़ की बौछारें",
   "weatherPage.condition.thunderstorm": "आंधी-तूफ़ान",
-  "weatherPage.condition.unknown": "अज्ञात मौसम"
+  "weatherPage.condition.unknown": "अज्ञात मौसम",
+  "weatherPage.loc.permissionDenied": "स्थान की अनुमति नहीं मिली। ब्राउज़र सेटिंग में इसे चालू करें या स्थान खोजें।",
+  "weatherPage.loc.timeout": "स्थान अनुरोध का समय समाप्त हो गया। फिर कोशिश करें या स्थान खोजें।",
+  "weatherPage.loc.unavailable": "आपके डिवाइस से स्थान नहीं मिल सका। फिर कोशिश करें या स्थान खोजें।",
+  "weatherPage.loc.unsupported": "यह ब्राउज़र स्थान सुविधा का समर्थन नहीं करता। इसके बजाय स्थान खोजें।",
+  "weatherPage.loc.insecure": "स्थान सुविधा के लिए सुरक्षित HTTPS पेज आवश्यक है।"
 }
