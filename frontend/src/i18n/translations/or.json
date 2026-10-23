@@ -1558,5 +1558,10 @@
   "weatherPage.condition.showers": "ବର୍ଷା ଛାଟ",
   "weatherPage.condition.snowShowers": "ତୁଷାର ଛାଟ",
   "weatherPage.condition.thunderstorm": "ଘଡ଼ଘଡ଼ି ସହ ଝଡ଼",
-  "weatherPage.condition.unknown": "ଅଜଣା ପାଣିପାଗ"
+  "weatherPage.condition.unknown": "ଅଜଣା ପାଣିପାଗ",
+  "weatherPage.loc.permissionDenied": "ଅବସ୍ଥାନ ଅନୁମତି ମିଳିଲା ନାହିଁ। ବ୍ରାଉଜର ସେଟିଂରେ ଅନୁମତି ଦିଅନ୍ତୁ କିମ୍ବା ସ୍ଥାନ ଖୋଜନ୍ତୁ।",
+  "weatherPage.loc.timeout": "ଅବସ୍ଥାନ ଅନୁରୋଧର ସମୟ ଶେଷ ହୋଇଗଲା। ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ କିମ୍ବା ସ୍ଥାନ ଖୋଜନ୍ତୁ।",
+  "weatherPage.loc.unavailable": "ଆପଣଙ୍କ ଡିଭାଇସରୁ ଅବସ୍ଥାନ ମିଳିଲା ନାହିଁ। ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ କିମ୍ବା ସ୍ଥାନ ଖୋଜନ୍ତୁ।",
+  "weatherPage.loc.unsupported": "ଏହି ବ୍ରାଉଜର ଅବସ୍ଥାନ ସୁବିଧାକୁ ସମର୍ଥନ କରେ ନାହିଁ। ବଦଳରେ ସ୍ଥାନ ଖୋଜନ୍ତୁ।",
+  "weatherPage.loc.insecure": "ଅବସ୍ଥାନ ସୁବିଧା ପାଇଁ ସୁରକ୍ଷିତ HTTPS ପୃଷ୍ଠା ଆବଶ୍ୟକ।"
 }
