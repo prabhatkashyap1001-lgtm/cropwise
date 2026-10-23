@@ -1558,5 +1558,10 @@
   "weatherPage.condition.showers": "वर्षाक बौछार",
   "weatherPage.condition.snowShowers": "हिमक बौछार",
   "weatherPage.condition.thunderstorm": "मेघगर्जनासहित तूफान",
-  "weatherPage.condition.unknown": "अज्ञात मौसम"
+  "weatherPage.condition.unknown": "अज्ञात मौसम",
+  "weatherPage.loc.permissionDenied": "स्थानक अनुमति नहि भेटल। ब्राउजर सेटिंगमे अनुमति दिअ वा स्थान खोजू।",
+  "weatherPage.loc.timeout": "स्थान अनुरोधक समय समाप्त भ गेल। फेर प्रयास करू वा स्थान खोजू।",
+  "weatherPage.loc.unavailable": "अहाँक डिवाइससँ स्थान नहि भेटल। फेर प्रयास करू वा स्थान खोजू।",
+  "weatherPage.loc.unsupported": "ई ब्राउजर स्थान सुविधाक समर्थन नहि करैत अछि। एकर बदला स्थान खोजू।",
+  "weatherPage.loc.insecure": "स्थान सुविधाक लेल सुरक्षित HTTPS पृष्ठ आवश्यक अछि।"
 }
