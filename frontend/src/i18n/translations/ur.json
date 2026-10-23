@@ -1677,5 +1677,10 @@
   "weatherPage.condition.showers": "بارش کی پھواریں",
   "weatherPage.condition.snowShowers": "برف کی پھواریں",
   "weatherPage.condition.thunderstorm": "گرج چمک کا طوفان",
-  "weatherPage.condition.unknown": "نامعلوم موسم"
+  "weatherPage.condition.unknown": "نامعلوم موسم",
+  "weatherPage.loc.permissionDenied": "مقام کی اجازت نہیں ملی۔ براؤزر کی ترتیبات میں اجازت دیں یا جگہ تلاش کریں۔",
+  "weatherPage.loc.timeout": "مقام کی درخواست کا وقت ختم ہو گیا۔ دوبارہ کوشش کریں یا جگہ تلاش کریں۔",
+  "weatherPage.loc.unavailable": "آپ کے آلے سے مقام حاصل نہیں ہو سکا۔ دوبارہ کوشش کریں یا جگہ تلاش کریں۔",
+  "weatherPage.loc.unsupported": "یہ براؤزر مقام کی سہولت کی حمایت نہیں کرتا۔ اس کے بجائے جگہ تلاش کریں۔",
+  "weatherPage.loc.insecure": "مقام کی سہولت کے لیے محفوظ HTTPS صفحہ ضروری ہے۔"
 }
